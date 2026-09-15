@@ -1219,3 +1219,86 @@ Publicly available council-service information is used solely to demonstrate con
 The prototype does not provide access to official council accounts, internal council case-management systems or authorised decision-making processes.
 
 Any `CIVIC-...` or `ESC-...` references shown in this repository are prototype references generated during development and testing and are **not official Portsmouth City Council reference numbers**.
+
+
+# Implementation Evidence
+
+The following screenshots provide visual evidence of the Civic System prototype across Microsoft Copilot Studio, Retrieval-Augmented Generation (RAG), Power Automate, Microsoft Dataverse and Power Apps.
+
+> Screenshots are provided as portfolio evidence. Sensitive credentials, account information, tenant details and personal resident information have been excluded.
+
+---
+
+## Microsoft Copilot Studio Agent
+
+The Civic System conversational agent was developed in Microsoft Copilot Studio with service-specific instructions, knowledge retrieval, conversational skills and Responsible AI controls.
+
+![Civic System Copilot Studio Agent](screenshots/01-copilot-agent.png)
+
+---
+
+## Knowledge Base & RAG
+
+Civic System uses a structured knowledge base containing 22 resident-facing documents across seven council service domains.
+
+![Civic System Knowledge Base](screenshots/02-knowledge-base.png)
+
+---
+
+## Conversational Skills
+
+Eight conversational skills provide service-specific routing together with shared safety, fallback and escalation behaviour.
+
+![Civic System Copilot Skills](screenshots/03-copilot-skills.png)
+
+---
+
+## Grounded RAG Response
+
+Retrieval-Augmented Generation enables the agent to retrieve relevant approved information before generating Portsmouth-specific responses.
+
+Cross-document retrieval was tested across multiple service areas while maintaining decision boundaries and source grounding.
+
+![Civic System RAG Grounded Response](screenshots/04-rag-grounded-response.png)
+
+---
+
+## Service Issue Automation
+
+The `CivicSystem - Submit Service Issue` Power Automate workflow supports controlled prototype transactions following explicit resident confirmation.
+
+The workflow passes structured information to Microsoft Dataverse and returns a generated prototype `CIVIC-...` reference.
+
+![Civic System Service Issue Workflow](screenshots/05-service-issue-workflow.png)
+
+---
+
+## Human Support Escalation
+
+The `CivicSystem - Request Human Support` workflow provides a human-in-the-loop escalation mechanism when AI guidance is insufficient or a resident requests human assistance.
+
+![Civic System Human Support Workflow](screenshots/06-human-support-workflow.png)
+
+---
+
+## Microsoft Dataverse
+
+Successful prototype service requests are persisted in Microsoft Dataverse, providing a structured backend record for staff review.
+
+![Civic System Dataverse Service Request](screenshots/07-dataverse-service-request.png)
+
+---
+
+## Power Apps Staff Portal
+
+The model-driven **Civic System — Staff Portal** provides staff-facing access to prototype service requests and human-support escalations stored in Dataverse.
+
+![Civic System Staff Portal](screenshots/08-staff-portal.png)
+
+---
+
+## End-to-End Implementation
+
+Together, these components demonstrate the complete prototype architecture:
+
+**Resident → Copilot Studio → RAG / Skills → Responsible AI Controls → Power Automate → Dataverse → Power Apps Staff Portal → Human Oversight**
